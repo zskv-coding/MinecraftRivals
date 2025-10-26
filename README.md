@@ -1,8 +1,10 @@
 # Minecraft Rivals
 
+A Minecraft Championship (MCC) style event plugin for Minecraft servers.
+
 ## Features
 
-### Implemented Features
+### ✅ Implemented Features
 
 - **Custom Team System** using Minecraft's default scoreboard teams
   - 8 visible teams: Red, Orange, Yellow, Lime, Green, Blue, Purple, Pink
@@ -34,8 +36,8 @@
   - Updates automatically (configurable interval)
   - Customizable title and format
 
-- **Custom Tablist**
-  - Teams grouped together with their scores
+- **Custom MCC-Style Tablist**
+  - Teams grouped together with their scores (just like MCC!)
   - Format: Team name → Team score (gold) → Player list
   - Online players shown in team colors
   - Offline players shown in gray
@@ -78,13 +80,13 @@ scoreboard:
   update-interval: 20  # ticks (1 second = 20 ticks)
 ```
 
-### Tablist
+### Tablist (MCC-Style)
 ```yaml
 tablist:
   footer: "&7Good luck and have fun!"
   update-interval: 20  # ticks (1 second = 20 ticks)
 ```
-The tablist displays teams grouped together with their scores.
+The tablist displays teams grouped together with their scores in MCC style.
 Uses custom `pixel_uppercase` font (requires resource pack).
 Note: Use `&` for color codes in config.yml (automatically converted to `§`)
 
@@ -149,7 +151,7 @@ MinecraftRivals/
 │   ├── MCRCommand.java              # Command handler with tab completion
 │   ├── PlayerListener.java          # Event listener for player joins
 │   ├── CustomScoreboardManager.java # Scoreboard update manager
-│   └── TablistManager.java          # Tablist
+│   └── TablistManager.java          # MCC-style tablist manager
 ├── src/main/resources/
 │   ├── plugin.yml                   # Plugin metadata and commands
 │   └── config.yml                   # Configuration file
@@ -182,6 +184,7 @@ The compiled JAR will be in the `target/` directory.
 - **Teams persist** across server restarts (stored in Minecraft's scoreboard)
 - **Automatic scoreboard updates** via BukkitRunnable (configurable interval)
 - **Real-time tablist updates** when players join/leave teams or server
+- **MCC-style tablist** with team grouping, online/offline player display
 - **Custom font support** - Uses `pixel_uppercase` font (requires resource pack)
 - **Offline player tracking** - Shows offline team members in gray
 - **Config-driven** - Most behavior can be changed without code modifications
@@ -189,7 +192,7 @@ The compiled JAR will be in the `target/` directory.
 
 ## Resource Pack
 
-The tablist uses the `pixel_uppercase` font for a nice look To see the custom font:
+The tablist uses the `pixel_uppercase` font for an authentic MCC look. To see the custom font:
 1. Create or download a resource pack with the `pixel_uppercase` font
 2. Place font files in `assets/minecraft/font/pixel_uppercase.json`
 3. Distribute the resource pack to players
@@ -209,4 +212,8 @@ Potential features to add:
 
 ## License
 
-Only use for the MC event "Minecraft Rivals". Any other use of this plugin will result in a copyright notice.
+[Add your license here]
+
+## Credits
+
+Created for MCC-style events on Minecraft servers.

@@ -1,0 +1,34 @@
+name: MinecraftRivals
+version: '1.0-SNAPSHOT'
+main: com.zskv.minecraftRivals.MinecraftRivals
+api-version: '1.21'
+commands:
+  mcr:
+    description: Main command for Minecraft Rivals
+    usage: /<command> <subcommand>
+  readycheck:
+    description: Respond to ready check
+    usage: /<command> <yes|no>
+  dishdash:
+    description: Dish Dash minigame commands
+    usage: /<command> <start|stop>
+permissions:
+  mcr.admin:
+    description: Allows starting and stopping the game
+    default: op
+  mcr.player:
+    description: Allows using basic player commands
+    default: true
+    children:
+      mcr.join: true
+      mcr.leave: true
+      mcr.teams: true
+  mcr.join:
+    description: Allows joining teams
+    default: true
+  mcr.leave:
+    description: Allows leaving teams
+    default: true
+  mcr.teams:
+    description: Allows viewing teams
+    default: true

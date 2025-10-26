@@ -1,0 +1,46 @@
+# Minecraft Rivals Configuration
+# Game settings
+game:
+  max-players: 40  # 8 teams x 5 players (or 10 teams x 4 players)
+  min-players-per-team: 1
+  max-players-per-team: 5
+  round-time: 300  # seconds
+  lobby-time: 60  # seconds before game starts
+  current-game: 1  # Current game number (use /mcr setgame to change)
+  total-games: 6  # Total number of games in the event
+
+# Teams settings
+# Visible teams are shown in /mcr teams and tab completion
+# Backlog teams (Cyan, Magenta) can be used if needed but aren't shown by default
+teams:
+  visible: [Red, Orange, Yellow, Lime, Green, Blue, Purple, Pink]
+  backlog: [Cyan, Magenta]
+
+# Scoreboard settings
+scoreboard:
+  title: "§b§lMC RIVALS"
+  update-interval: 20  # ticks (1 second)
+
+# Scoreboard objectives
+objectives:
+  - name: points
+    type: dummy
+    display: "§e§lPoints"
+
+# Tablist settings (MCC-style)
+# The tablist will show teams grouped together with their scores
+# Online players appear in team colors, offline players appear grayed out
+# Uses custom font "pixel_uppercase" (requires resource pack)
+tablist:
+  footer: "&7Good luck and have fun!"
+  update-interval: 20  # ticks (1 second = 20 ticks)
+
+# Messages
+messages:
+  prefix: "§6§l[MCR]§r "
+  team-join: "§aYou joined team %team%!"
+  team-leave: "§cYou left team %team%!"
+  team-full: "§cThat team is full!"
+  no-permission: "§cYou don't have permission to do that!"
+  game-start: "§a§lGame starting!"
+  game-stop: "§c§lGame stopped!"
